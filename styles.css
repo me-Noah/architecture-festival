@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* Global Styles */
 * {
     margin: 0;
@@ -123,3 +124,130 @@ h2 {
         max-height: 200px;
     }
 }
+=======
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(to right, #3D1308, #8A2F06, #69300F);
+    color: #F5E6DA;
+    text-align: center;
+    padding: 10px;
+}
+
+
+/* Invitation Box with Glassmorphism */
+.container {
+    max-width: 650px;
+    margin: 40px auto;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(255, 140, 0, 0.5);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 140, 0, 0.8);
+    animation: glow 1.5s infinite alternate;
+}
+
+/* Glowing Effect */
+@keyframes glow {
+    from {
+        box-shadow: 0 0 10px rgba(255, 140, 0, 0.5);
+    }
+    to {
+        box-shadow: 0 0 20px rgba(255, 140, 0, 0.9);
+    }
+}
+
+/* Banner Image */
+.banner {
+    width: 90%;
+    max-height: 250px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+
+/* Headings */
+h1 {
+    font-size: 36px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #FFD29D;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: 400;
+    color: #FFC27A;
+}
+
+/* Event Details */
+.event-details {
+    font-size: 18px;
+    margin: 15px 0;
+    line-height: 1.5;
+}
+
+/* Call to Action Button */
+.cta {
+    display: inline-block;
+    background: #FF8C00;
+    color: white;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.cta:hover {
+    background: #E67300;
+    transform: scale(1.05);
+}
+
+/* Footer */
+.footer {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #E2BCA1;
+}
+
+/* 🔹 Mobile Optimization */
+@media (max-width: 768px) {
+    .container {
+        max-width: 90%;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    .event-details {
+        font-size: 16px;
+    }
+
+    .cta {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+
+    .banner {
+        max-height: 200px;
+    }
+}
+>>>>>>> 6b0b5113e57badc4fec8c314dfd886c795b668f8
