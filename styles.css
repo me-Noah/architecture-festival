@@ -57,6 +57,8 @@ h1 {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 
+	text-shadow: 2px 2px 0px rgba(255, 153, 51, 0.8),
+	
     /* Padding for Visual Balance */
     padding: 5px 0;
 }
@@ -175,6 +177,7 @@ h2::after {
     text-decoration: none;
 }
 
+
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
     .container {
@@ -183,15 +186,25 @@ h2::after {
     }
 
     h1 {
-        font-size: 36px;
+        font-size: 22px; /* Smaller than h2 */
     }
 
     h2 {
-        font-size: 24px;
+        font-size: 28px; /* Always larger than h1 */
     }
 
     .cta {
         font-size: 17px;
         padding: 12px 26px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 18px; /* Even smaller for mobile */
+    }
+
+    h2 {
+        font-size: 24px; /* Always larger than h1 */
     }
 }
