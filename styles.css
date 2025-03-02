@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-/* Global Styles */
+/* Global Reset */
 * {
     margin: 0;
     padding: 0;
@@ -7,247 +6,192 @@
     font-family: 'Poppins', sans-serif;
 }
 
+/* Background Styling */
 body {
-    background: linear-gradient(to right, #3D1308, #8A2F06, #69300F);
-    color: #F5E6DA;
+    background: linear-gradient(to right, #001f3f, #003b7a, #ff9800);
+    color: white;
     text-align: center;
-    padding: 10px;
+    padding: 20px;
+    transition: background 0.5s ease-in-out;
 }
 
-
-/* Invitation Box with Glassmorphism */
+/* Main Invitation Box */
 .container {
-    max-width: 650px;
-    margin: 40px auto;
-    background: rgba(255, 255, 255, 0.1);
-    padding: 25px;
-    border-radius: 12px;
-    box-shadow: 0 0 20px rgba(255, 140, 0, 0.5);
-    backdrop-filter: blur(10px);
-    border: 2px solid rgba(255, 140, 0, 0.8);
-    animation: glow 1.5s infinite alternate;
+    max-width: 750px;
+    margin: 50px auto;
+    background: rgba(255, 255, 255, 0.15); /* Softer Transparency */
+    padding: 35px;
+    border-radius: 18px;
+    backdrop-filter: blur(14px);
+    box-shadow: 0 0 30px rgba(255, 165, 0, 0.4);
+    border: 2px solid rgba(255, 255, 255, 0.25);
+    animation: glow 3s infinite alternate;
+    transition: all 0.3s ease-in-out;
 }
 
-/* Glowing Effect */
+/* Subtle Glow Effect */
 @keyframes glow {
-    from {
-        box-shadow: 0 0 10px rgba(255, 140, 0, 0.5);
-    }
-    to {
-        box-shadow: 0 0 20px rgba(255, 140, 0, 0.9);
-    }
+    0% { box-shadow: 0 0 20px rgba(255, 140, 0, 0.4); }
+    100% { box-shadow: 0 0 30px rgba(255, 140, 0, 0.8); }
 }
 
-/* Banner Image */
+/* Banner Styling */
 .banner {
-    width: 90%;
-    max-height: 250px;
+    width: 100%;
+    max-height: 260px;
     object-fit: cover;
-    border-radius: 12px;
-    margin-bottom: 15px;
+    border-radius: 14px;
 }
 
-/* Headings */
+/* Heading Styles */
+/* Invitation Heading */
 h1 {
-    font-size: 36px;
-    font-weight: 600;
+    font-family: 'Cinzel', serif;
+    font-size: 36px; /* Slightly larger */
+    font-weight: 800; /* Stronger impact */
     text-transform: uppercase;
-    letter-spacing: 1.5px;
-    color: #FFD29D;
+    letter-spacing: 2px;
+    
+    /* Elegant Metallic Gold Effect */
+    background: linear-gradient(135deg, #ffcc70, #ff8c00, #d2691e);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    /* Padding for Visual Balance */
+    padding: 5px 0;
 }
 
+/* Event Name with Stylish Underline */
 h2 {
-    font-size: 24px;
-    font-weight: 400;
-    color: #FFC27A;
+    font-family: 'Cinzel', serif;
+    font-size: 46px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    
+    /* Gradient Text */
+    background: linear-gradient(to right, #ffb300, #ff6f00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+	
+	text-shadow: 2px 2px 0px rgba(255, 153, 51, 0.8),
+                 4px 4px 10px rgba(0, 0, 0, 0.6);
+
+    /* Modern Underline */
+    display: inline-block;
+    position: relative;
+    padding-bottom: 8px;
+    margin-bottom: 15px; /* More spacing */
+		
 }
 
-/* Event Details */
+h2::after {
+    content: "";
+    display: block;
+    width: 80%;
+    height: 3px;
+    background: rgba(255, 152, 0, 0.7);
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+}
+
+/* Event Details with Better Spacing */
 .event-details {
-    font-size: 18px;
-    margin: 15px 0;
-    line-height: 1.5;
+    font-family: 'Cinzel', sans-serif;
+    font-size: 19px;
+    font-weight: 600;
+    color: #fff;
+    line-height: 1.8; /* More spacing */
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Bold Labels */
+.event-details span {
+    font-weight: 600;
+    color: #ffa726;
+}
+
+/* Increase Spacing Between Sections */
+.event-details p {
+    margin-bottom: 12px;
+}
+
+
+/* Main Message */
+.mainMsg {
+    font-family: 'Cinzel', serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: #ffcc80;
+}
+
+.loc {
+    font-family: 'Cinzel', serif;
+    color: #ffcc80;
+	font-weight: 600;
 }
 
 /* Call to Action Button */
 .cta {
     display: inline-block;
-    background: #FF8C00;
+    background: linear-gradient(to right, #ff9800, #ff6600);
     color: white;
-    padding: 12px 24px;
+    padding: 14px 32px;
     text-decoration: none;
-    border-radius: 8px;
-    font-size: 18px;
+    border-radius: 35px;
+    font-size: 20px;
     font-weight: bold;
-    transition: 0.3s ease-in-out;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 6px 18px rgba(255, 140, 0, 0.5);
+    font-family: 'Cinzel', serif;
 }
 
 .cta:hover {
-    background: #E67300;
-    transform: scale(1.05);
+    background: linear-gradient(to right, #ff6600, #ff4500);
+    transform: scale(1.1);
+    box-shadow: 0px 10px 25px rgba(255, 140, 0, 0.8);
 }
 
 /* Footer */
 .footer {
-    margin-top: 20px;
-    font-size: 16px;
-    color: #E2BCA1;
-}
-
-/* 🔹 Mobile Optimization */
-@media (max-width: 768px) {
-    .container {
-        max-width: 90%;
-        padding: 20px;
-    }
-
-    h1 {
-        font-size: 28px;
-    }
-
-    h2 {
-        font-size: 22px;
-    }
-
-    .event-details {
-        font-size: 16px;
-    }
-
-    .cta {
-        font-size: 16px;
-        padding: 10px 20px;
-    }
-
-    .banner {
-        max-height: 200px;
-    }
-}
-=======
-/* Global Styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
-
-body {
-    background: linear-gradient(to right, #3D1308, #8A2F06, #69300F);
-    color: #F5E6DA;
+    margin-top: 35px;
+    font-size: 17px;
+	font-weight: 600;
+    color: #ddd;
     text-align: center;
-    padding: 10px;
+    padding: 16px;
+    font-family: 'Cinzel', serif;
+    letter-spacing: 0.6px;
+    word-spacing: 1.7px;
 }
 
-
-/* Invitation Box with Glassmorphism */
-.container {
-    max-width: 650px;
-    margin: 40px auto;
-    background: rgba(255, 255, 255, 0.1);
-    padding: 25px;
-    border-radius: 12px;
-    box-shadow: 0 0 20px rgba(255, 140, 0, 0.5);
-    backdrop-filter: blur(10px);
-    border: 2px solid rgba(255, 140, 0, 0.8);
-    animation: glow 1.5s infinite alternate;
-}
-
-/* Glowing Effect */
-@keyframes glow {
-    from {
-        box-shadow: 0 0 10px rgba(255, 140, 0, 0.5);
-    }
-    to {
-        box-shadow: 0 0 20px rgba(255, 140, 0, 0.9);
-    }
-}
-
-/* Banner Image */
-.banner {
-    width: 90%;
-    max-height: 250px;
-    object-fit: cover;
-    border-radius: 12px;
-    margin-bottom: 15px;
-}
-
-/* Headings */
-h1 {
-    font-size: 36px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    color: #FFD29D;
-}
-
-h2 {
-    font-size: 24px;
-    font-weight: 400;
-    color: #FFC27A;
-}
-
-/* Event Details */
-.event-details {
-    font-size: 18px;
-    margin: 15px 0;
-    line-height: 1.5;
-}
-
-/* Call to Action Button */
-.cta {
-    display: inline-block;
-    background: #FF8C00;
-    color: white;
-    padding: 12px 24px;
-    text-decoration: none;
-    border-radius: 8px;
-    font-size: 18px;
+/* Email Highlight */
+.footer strong {
+    color: #ffa726;
     font-weight: bold;
-    transition: 0.3s ease-in-out;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    text-decoration: none;
 }
 
-.cta:hover {
-    background: #E67300;
-    transform: scale(1.05);
-}
-
-/* Footer */
-.footer {
-    margin-top: 20px;
-    font-size: 16px;
-    color: #E2BCA1;
-}
-
-/* 🔹 Mobile Optimization */
+/* Mobile Responsiveness */
 @media (max-width: 768px) {
     .container {
-        max-width: 90%;
-        padding: 20px;
+        width: 90%;
+        padding: 25px;
     }
 
     h1 {
-        font-size: 28px;
+        font-size: 36px;
     }
 
     h2 {
-        font-size: 22px;
-    }
-
-    .event-details {
-        font-size: 16px;
+        font-size: 24px;
     }
 
     .cta {
-        font-size: 16px;
-        padding: 10px 20px;
-    }
-
-    .banner {
-        max-height: 200px;
+        font-size: 17px;
+        padding: 12px 26px;
     }
 }
->>>>>>> 6b0b5113e57badc4fec8c314dfd886c795b668f8
